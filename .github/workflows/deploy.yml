@@ -6,6 +6,7 @@ on:
       - dev
 env:
   MDB_DB_NAME: ghecko-db
+  DBX_NAME: ${{ secrets.DBX_NAME }}
 jobs:
   test:
     env:
@@ -13,7 +14,6 @@ jobs:
       MDB_USERNAME: mdbadmin
       MDB_PASSWORD: MdB123*
       PORT: 8080
-      DBX_NAME: ${{ secrets.DBX_NAME }}
     environment: testing
     runs-on: ubuntu-latest
     steps:
